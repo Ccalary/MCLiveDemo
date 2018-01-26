@@ -1,0 +1,6 @@
+framework module Pods_LiveHome {
+  umbrella header "Pods-LiveHome-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="R4G-ex-hg9" customClass="CloseStreamingPopView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="观众正在赶来的路上哦～" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZM-Iy-Ebt">
+                    <rect key="frame" x="0.0" y="67" width="299" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbC-PE-c85">
+                    <rect key="frame" x="57.5" y="108" width="185" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="GDm-Bk-5Lk"/>
+                        <constraint firstAttribute="width" constant="185" id="Mu8-BA-36G"/>
+                    </constraints>
+                    <state key="normal" title="关闭直播">
+                        <color key="titleColor" red="0.1058823529" green="0.46274509800000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="closeBtnAction:" destination="R4G-ex-hg9" eventType="touchUpInside" id="93t-fX-BlB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jm-ZD-QdB">
+                    <rect key="frame" x="57.5" y="162" width="185" height="40"/>
+                    <color key="backgroundColor" red="0.1058823529" green="0.46274509800000002" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="185" id="NDD-LH-Ykc"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="dEW-ft-fq7"/>
+                        <constraint firstAttribute="height" constant="40" id="mZK-Ps-E5p"/>
+                    </constraints>
+                    <state key="normal" title="继续直播">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnAction:" destination="R4G-ex-hg9" eventType="touchUpInside" id="gzm-g6-2LS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0jm-ZD-QdB" firstAttribute="top" secondItem="WbC-PE-c85" secondAttribute="bottom" constant="14" id="6Us-ho-7Ye"/>
+                <constraint firstItem="0jm-ZD-QdB" firstAttribute="centerX" secondItem="R4G-ex-hg9" secondAttribute="centerX" id="8P4-fz-P1M"/>
+                <constraint firstItem="0jm-ZD-QdB" firstAttribute="centerX" secondItem="R4G-ex-hg9" secondAttribute="centerX" id="NIb-Dg-nRC"/>
+                <constraint firstItem="AZM-Iy-Ebt" firstAttribute="leading" secondItem="R4G-ex-hg9" secondAttribute="leading" id="Z5v-O3-4z9"/>
+                <constraint firstItem="0jm-ZD-QdB" firstAttribute="centerX" secondItem="AZM-Iy-Ebt" secondAttribute="centerX" id="e0A-Rx-9xH"/>
+                <constraint firstItem="0jm-ZD-QdB" firstAttribute="centerX" secondItem="WbC-PE-c85" secondAttribute="centerX" id="jpk-CR-IBa"/>
+                <constraint firstItem="AZM-Iy-Ebt" firstAttribute="top" secondItem="R4G-ex-hg9" secondAttribute="top" constant="67" id="lGZ-yv-7TG"/>
+                <constraint firstAttribute="bottom" secondItem="0jm-ZD-QdB" secondAttribute="bottom" constant="98" id="omU-wP-Rri"/>
+                <constraint firstItem="WbC-PE-c85" firstAttribute="top" secondItem="AZM-Iy-Ebt" secondAttribute="bottom" constant="20" id="qgi-bM-0Ge"/>
+                <constraint firstItem="0jm-ZD-QdB" firstAttribute="centerX" secondItem="R4G-ex-hg9" secondAttribute="centerX" id="sUS-U0-sZl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeBtn" destination="WbC-PE-c85" id="c2U-h2-bF7"/>
+            </connections>
+            <point key="canvasLocation" x="29" y="-60.5"/>
+        </view>
+    </objects>
+</document>
